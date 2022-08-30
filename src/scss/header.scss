@@ -6,18 +6,18 @@
   width: 100%;
   z-index: 49;
   transition: all 0.3s ease 0s;
-  @include adaptiveValue("padding-top", 36, 10);
-  @include adaptiveValue("padding-bottom", 36, 10);
+  @include adaptiveValue("padding-top", 36, 25);
+  @include adaptiveValue("padding-bottom", 36, 25);
   &._header-scroll {
-    padding-top: rem(36);
-    padding-bottom: rem(36);
-    background-color: rgba(244, 229, 204, 0.829);
+    @include adaptiveValue("padding-top", 36, 25);
+    @include adaptiveValue("padding-bottom", 36, 25);
+    background-color: $sectionTwoColor;
   }
   // .header__container
   &__container {
-    display: grid;
-    grid-template-columns: rem(300) 1fr rem(300);
+    display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   // .header__logo
   &__logo {
@@ -37,32 +37,75 @@
     position: relative;
     z-index: 5;
     display: flex;
-    gap: rem(24);
     align-items: center;
+    @include adaptiveValue("gap", 24, 14, 2, 1170, 768);
+
+    @media (max-width: 520px) {
+      display: none;
+
+      .menu-open & {
+      }
+    }
   }
+
   // .header__form
   &__form {
     filter: drop-shadow(6px 2px 24px rgba(0, 0, 0, 0.13));
   }
   // .header__button
   &__button {
-    margin-right: rem(16);
+    @include adaptiveValue("margin-right", 16, 8, 2, 1170, 768);
   }
 }
 .menu {
   padding: 0 rem(10);
   // .menu__body
   &__body {
+    @media (max-width: $mobile) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 0;
+      left: -100%;
+      transition: all 0.3s ease 0s;
+      overflow: auto;
+      background-color: $sectionColor;
+      gap: rem(30);
+      z-index: 3;
+      @include adaptiveValue("padding-top", 160, 120, 768, 320, 2);
+      padding-left: rem(15);
+      padding-right: rem(15);
+      padding-bottom: rem(30);
+      &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: -100%;
+        transition: all 0.3s ease 0s;
+        width: 100%;
+        @include adaptiveValue("height", 105, 75, 2, 768, 320);
+        background-color: $sectionTwoColor;
+        z-index: 2;
+      }
+      .menu-open & {
+        left: 0;
+        &::before {
+          left: 0;
+        }
+      }
+    }
   }
   // .menu__list
   &__list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     row-gap: rem(10);
     column-gap: rem(32);
-    @include adaptiveValue("gap", 32, 15);
+    @include adaptiveValue("gap", 32, 20, 2, 1170, 768);
     @media (max-width: $mobile) {
       flex-direction: column;
       text-align: center;
@@ -74,8 +117,8 @@
   }
   // .menu__link
   &__link {
-    font-size: 18px;
     line-height: 1.5;
+    @include adaptiveValue("font-size", 18, 15);
     @media (max-width: $mobile) {
       font-size: rem(40);
     }
@@ -91,6 +134,10 @@
   background-color: $lightColor;
   padding: rem(11) rem(12);
   border-radius: rem(35);
+
+  @media (max-width: $mobile) {
+    margin-right: 20px;
+  }
   // .form__input
   &__input {
   }
@@ -99,52 +146,50 @@
 //====================================================================================================
 
 //Burger
-/*
 .icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - rem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #000;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
-*/
