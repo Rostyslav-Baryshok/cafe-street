@@ -1,13 +1,101 @@
 //====================================================================================================
 .header {
-  text-align: center;
-  padding: 40px 0;
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 10vmax;
-  background-image: linear-gradient(90deg, blue, yellow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 49;
+  transition: all 0.3s ease 0s;
+  @include adaptiveValue("padding-top", 36, 10);
+  @include adaptiveValue("padding-bottom", 36, 10);
+  &._header-scroll {
+    padding-top: rem(36);
+    padding-bottom: rem(36);
+    background-color: rgba(244, 229, 204, 0.829);
+  }
+  // .header__container
+  &__container {
+    display: grid;
+    grid-template-columns: rem(300) 1fr rem(300);
+    align-items: center;
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 5;
+    @include adaptiveValue("width", 150, 120, 1440, 768, 1);
+    img {
+      max-width: 100%;
+    }
+  }
+
+  // .header__menu
+  &__menu {
+  }
+  // .header__actions
+  &__actions {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    gap: rem(24);
+    align-items: center;
+  }
+  // .header__form
+  &__form {
+    filter: drop-shadow(6px 2px 24px rgba(0, 0, 0, 0.13));
+  }
+  // .header__button
+  &__button {
+    margin-right: rem(16);
+  }
 }
+.menu {
+  padding: 0 rem(10);
+  // .menu__body
+  &__body {
+  }
+  // .menu__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: rem(10);
+    column-gap: rem(32);
+    @include adaptiveValue("gap", 32, 15);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      text-align: center;
+      row-gap: rem(30);
+    }
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    font-size: 18px;
+    line-height: 1.5;
+    @media (max-width: $mobile) {
+      font-size: rem(40);
+    }
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+.form-header {
+  background-color: $lightColor;
+  padding: rem(11) rem(12);
+  border-radius: rem(35);
+  // .form__input
+  &__input {
+  }
+}
+
 //====================================================================================================
 
 //Burger

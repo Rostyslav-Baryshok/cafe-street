@@ -1,5 +1,28 @@
 <header class="header">
 	<div class="header__container">
-		Hello, I'm Header!
+		<a href="" class="header__logo"><img src="@img/header/logo_coffe.svg" alt="Logo"></a>
+		<div class="header__menu menu">
+			<nav class="menu__body">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="" class="menu__link">About us</a></li>
+					<li class="menu__item"><a href="" class="menu__link">Our Product</a></li>
+					<li class="menu__item"><a href="" class="menu__link">Delivery</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header__actions">
+			<div class="header__form">
+				<form action="#" class="form-header">
+					<button type="button" class="header__button">
+						<img src="@img/header/search.svg" alt="Search">
+					</button>
+					<input data-required="email" autocomplete="off" type="text" name="form[]" data-error="Invalid email address"
+						placeholder="Cappuccino" class="form__input">
+				</form>
+			</div>
+			<button type="button" class="header__button">
+				<img src="@img/header/shopping-cart.svg" alt="Shopping-cart">
+			</button>
+		</div>
 	</div>
 </header>
