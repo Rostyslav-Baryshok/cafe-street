@@ -19,6 +19,7 @@
     align-items: center;
     justify-content: space-between;
   }
+
   // .header__logo
   &__logo {
     position: relative;
@@ -32,9 +33,10 @@
   // .header__menu
   &__menu {
   }
+
   // .header__actions
   &__actions {
-    position: relative;
+    // position: relative;
     z-index: 5;
     display: flex;
     align-items: center;
@@ -42,9 +44,6 @@
 
     @media (max-width: 520px) {
       display: none;
-
-      .menu-open & {
-      }
     }
   }
 
@@ -52,11 +51,13 @@
   &__form {
     filter: drop-shadow(6px 2px 24px rgba(0, 0, 0, 0.13));
   }
+
   // .header__button
   &__button {
     @include adaptiveValue("margin-right", 16, 8, 2, 1170, 768);
   }
 }
+
 .menu {
   padding: 0 rem(10);
   // .menu__body
@@ -75,7 +76,7 @@
       background-color: $sectionColor;
       gap: rem(30);
       z-index: 3;
-      @include adaptiveValue("padding-top", 160, 120, 768, 320, 2);
+      @include adaptiveValue("padding-top", 160, 120, 2, 768, 320);
       padding-left: rem(15);
       padding-right: rem(15);
       padding-bottom: rem(30);
@@ -90,6 +91,7 @@
         background-color: $sectionTwoColor;
         z-index: 2;
       }
+
       .menu-open & {
         left: 0;
         &::before {
@@ -98,6 +100,7 @@
       }
     }
   }
+
   // .menu__list
   &__list {
     display: flex;
@@ -112,17 +115,20 @@
       row-gap: rem(30);
     }
   }
+
   // .menu__item
   &__item {
   }
+
   // .menu__link
   &__link {
     line-height: 1.5;
+    transition: color 0.3s ease 0s;
     @include adaptiveValue("font-size", 18, 15, 0, 1170, 768);
     @media (max-width: $mobile) {
       font-size: rem(40);
     }
-    transition: color 0.3s ease 0s;
+
     @media (any-hover: hover) {
       &:hover {
         color: $primaryColor;
@@ -130,6 +136,7 @@
     }
   }
 }
+
 .form-header {
   background-color: $lightColor;
   padding: rem(11) rem(12);
@@ -138,6 +145,7 @@
   @media (max-width: $mobile) {
     margin-right: 20px;
   }
+
   // .form__input
   &__input {
   }
@@ -164,7 +172,7 @@
       position: absolute;
       width: 100%;
       height: rem(2);
-      background-color: #000;
+      background-color: $mainColor;
     }
     &::before {
       top: 0;
@@ -175,12 +183,10 @@
     span {
       top: calc(50% - rem(1));
     }
+
     .menu-open & {
       span {
         width: 0;
-      }
-      &::before,
-      &::after {
       }
       &::before {
         top: calc(50% - rem(1));
