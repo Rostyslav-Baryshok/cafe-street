@@ -118,7 +118,7 @@
   // .menu__link
   &__link {
     line-height: 1.5;
-    @include adaptiveValue("font-size", 18, 15);
+    @include adaptiveValue("font-size", 18, 15, 0, 1170, 768);
     @media (max-width: $mobile) {
       font-size: rem(40);
     }
