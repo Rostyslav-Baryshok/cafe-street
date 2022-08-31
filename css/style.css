@@ -249,6 +249,10 @@ body {
   .menu__list {
     gap: 2rem;
   }
+
+  .menu__link {
+    font-size: 1.125rem;
+  }
 }
 
 @media (min-width: 48em) {
@@ -273,9 +277,11 @@ body {
   .header._header-scroll {
     padding-bottom: 2.25rem;
   }
+}
 
+@media (max-width: 48em) {
   .menu__link {
-    font-size: 1.125rem;
+    font-size: 0.9375rem;
   }
 }
 
@@ -300,10 +306,6 @@ body {
 
   .header._header-scroll {
     padding-bottom: 1.5625rem;
-  }
-
-  .menu__link {
-    font-size: 0.9375rem;
   }
 }
 
@@ -488,18 +490,6 @@ body {
       padding-bottom: calc(1.5625rem + 0.6875 * (100vw - 20rem) / 55);
     }
 }
-
-@supports (font-size: clamp( 0.9375rem , 0.8693181818rem  +  0.3409090909vw , 1.125rem )) {
-    .menu__link {
-      font-size: clamp( 0.9375rem , 0.8693181818rem  +  0.3409090909vw , 1.125rem );
-    }
-}
-
-@supports not (font-size: clamp( 0.9375rem , 0.8693181818rem  +  0.3409090909vw , 1.125rem )) {
-    .menu__link {
-      font-size: calc(0.9375rem + 0.1875 * (100vw - 20rem) / 55);
-    }
-}
 }
 
 @media (min-width: 0.0625em) and (max-width: 48em) {
@@ -550,6 +540,18 @@ body {
 @supports not (gap: clamp( 1.25rem , -0.1828358209rem  +  2.9850746269vw , 2rem )) {
     .menu__list {
       gap: calc(1.25rem + 0.75 * (100vw - 48rem) / 25.125);
+    }
+}
+
+@supports (font-size: clamp( 0.9375rem , 0.5792910448rem  +  0.7462686567vw , 1.125rem )) {
+    .menu__link {
+      font-size: clamp( 0.9375rem , 0.5792910448rem  +  0.7462686567vw , 1.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.9375rem , 0.5792910448rem  +  0.7462686567vw , 1.125rem )) {
+    .menu__link {
+      font-size: calc(0.9375rem + 0.1875 * (100vw - 48rem) / 25.125);
     }
 }
 }
