@@ -1,8 +1,10 @@
 .main-block {
+  position: relative;
   background-color: $sectionColor;
   // .main-block__container
   &__container {
     display: flex;
+    gap: rem(167);
     align-items: center;
     padding-top: rem(158);
     padding-bottom: rem(396);
@@ -38,6 +40,9 @@
   }
   // .main-block__button
   &__button {
+    // .main-block__button_text
+    &_text {
+    }
     // .main-block__button_icon
     &_icon {
       display: flex;
@@ -84,6 +89,15 @@
   &__background {
     // .main-block__background_01
     &_01 {
+      position: absolute;
+      left: 7px;
+      top: 554px;
+    }
+    // .main-block__background_02
+    &_02 {
+      position: absolute;
+      left: 922px;
+      top: -34px;
     }
   }
 }
