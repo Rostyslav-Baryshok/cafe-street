@@ -2,8 +2,6 @@
   background-color: $sectionColor;
   // .main-block__container
   &__container {
-    // @include adaptiveValue("padding-top", 158, 50);
-    // @include adaptiveValue("padding-bottom", 396, 230);
     display: flex;
     align-items: center;
     padding-top: rem(158);
