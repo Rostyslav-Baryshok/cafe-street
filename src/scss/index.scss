@@ -1,8 +1,8 @@
 .main-block {
-  position: relative;
   background-color: $sectionColor;
   // .main-block__container
   &__container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,14 +64,18 @@
   // .main-block__right
   &__right {
     position: relative;
+    width: rem(526);
     z-index: 1;
   }
   // .main-block__img
   &__img {
+    display: flex;
+    justify-content: center;
   }
   // .main-block__info
   &__info {
     .info-block {
+      // position: relative;
       // .info-block__item
       &__item {
         position: absolute;
@@ -86,17 +90,17 @@
         // .info-block__item_1
         &_1 {
           top: 10px;
-          left: -90px;
+          left: 1px;
         }
         // .info-block__item_2
         &_2 {
           top: 285px;
-          left: 0px;
+          left: 55px;
         }
         // .info-block__item_3
         &_3 {
           top: 65px;
-          left: 260px;
+          left: 345px;
           display: flex;
           flex-direction: row-reverse;
           &::before {
@@ -114,14 +118,14 @@
     // .main-block__background_01
     &_01 {
       position: absolute;
-      left: 7px;
+      left: -9vw;
       top: 554px;
     }
     // .main-block__background_02
     &_02 {
       position: absolute;
-      left: 922px;
-      top: -34px;
+      left: 50vw;
+      top: -40px;
     }
   }
 }
