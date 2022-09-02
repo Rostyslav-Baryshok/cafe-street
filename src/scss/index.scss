@@ -3,20 +3,30 @@
   // .main-block__container
   &__container {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-top: rem(158);
     padding-bottom: rem(396);
+
+    @media (min-width: rem(768)) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+    }
   }
   // .main-block__left
   &__left {
+    z-index: 1;
   }
   // .main-block__title
   &__title {
     font-weight: 600;
     font-size: 48px;
     line-height: 1.5;
+    padding: rem(5);
     max-width: rem(489);
     margin-bottom: rem(24);
     & span {
@@ -29,6 +39,7 @@
     font-size: 18px;
     line-height: 1.5;
     max-width: 393px;
+    padding: rem(5);
     margin-bottom: rem(32);
     color: $secondLightColor;
   }
@@ -64,13 +75,15 @@
   // .main-block__right
   &__right {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: rem(526);
+    height: rem(416);
     z-index: 1;
   }
   // .main-block__img
   &__img {
-    display: flex;
-    justify-content: center;
   }
   // .main-block__info
   &__info {
@@ -87,22 +100,24 @@
         color: $secondColor;
         border: 6px solid rgba(253, 180, 112, 0.45);
         background-color: $lightColor;
+        box-shadow: 0px 0px 5px 0px;
+
         // .info-block__item_1
         &_1 {
-          top: 10px;
-          left: 1px;
+          top: 45px;
+          @include adaptiveValue("left", 1, 15, 2, 1050, 768);
         }
         // .info-block__item_2
         &_2 {
-          top: 285px;
-          left: 55px;
+          @include adaptiveValue("top", 315, 335, 2, 1050, 768);
+          @include adaptiveValue("left", 60, 12, 2, 1050, 768);
         }
         // .info-block__item_3
         &_3 {
-          top: 65px;
-          left: 345px;
           display: flex;
           flex-direction: row-reverse;
+          @include adaptiveValue("top", 105, 315, 2, 1050, 768);
+          @include adaptiveValue("left", 345, 195, 2, 1050, 768);
           &::before {
             content: url(../img/icon-star.svg);
             position: relative;
