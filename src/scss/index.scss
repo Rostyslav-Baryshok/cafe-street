@@ -1,3 +1,4 @@
+//========================================================================================================================================================
 .main-block {
   background-color: $sectionColor;
   // .main-block__container
@@ -11,16 +12,13 @@
       justify-content: space-between;
       align-items: center;
     }
-
-    @media (max-width: $mobile) {
-      display: flex;
-      flex-direction: column;
-    }
   }
+
   // .main-block__left
   &__left {
     z-index: 1;
   }
+
   // .main-block__title
   &__title {
     font-weight: 600;
@@ -33,6 +31,7 @@
       color: $primaryColor;
     }
   }
+
   // .main-block__text
   &__text {
     font-weight: 400;
@@ -43,12 +42,14 @@
     margin-bottom: rem(32);
     color: $secondLightColor;
   }
+
   // .main-block__box
   &__box {
     display: flex;
     align-items: center;
     gap: rem(26);
   }
+
   // .main-block__button
   &__button {
     // .main-block__button_text
@@ -64,6 +65,7 @@
       background-color: $primaryColor;
     }
   }
+
   // .main-block__link
   &__link {
     font-weight: 700;
@@ -72,23 +74,28 @@
     padding: rem(10) rem(24);
     color: $primaryColor;
   }
+
   // .main-block__right
   &__right {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: rem(526);
     height: rem(416);
     z-index: 1;
+
+    @media (min-width: em(768)) {
+      width: rem(526);
+    }
   }
+
   // .main-block__img
   &__img {
   }
+
   // .main-block__info
   &__info {
     .info-block {
-      // position: relative;
       // .info-block__item
       &__item {
         position: absolute;
@@ -106,28 +113,50 @@
         &_1 {
           top: 45px;
           @include adaptiveValue("left", 1, 15, 2, 1050, 768);
+
+          @media (max-width: $mobile) {
+            @include adaptiveValue("top", 40, 30, 2, 767, 320);
+            @include adaptiveValue("left", 120, 15, 2, 767, 320);
+          }
         }
+
         // .info-block__item_2
         &_2 {
           @include adaptiveValue("top", 315, 335, 2, 1050, 768);
           @include adaptiveValue("left", 60, 12, 2, 1050, 768);
+
+          @media (max-width: $mobile) {
+            @include adaptiveValue("top", 310, 323, 2, 767, 320);
+            @include adaptiveValue("left", 145, 3, 2, 767, 320);
+          }
         }
+
         // .info-block__item_3
         &_3 {
           display: flex;
           flex-direction: row-reverse;
           @include adaptiveValue("top", 105, 315, 2, 1050, 768);
           @include adaptiveValue("left", 345, 195, 2, 1050, 768);
+
           &::before {
             content: url(../img/icon-star.svg);
             position: relative;
             top: 2px;
             margin-left: rem(4);
           }
+
+          @media (max-width: $mobile) {
+            // right: 30px;
+            @include adaptiveValue("top", 105, 240, 2, 767, 320);
+            @include adaptiveValue("left", 460, 113, 2, 767, 320);
+            // @include adaptiveValue("top", 105, 240, 2, 767, 320);
+            // @include adaptiveValue("left", 100, 113, 2, 767, 320);
+          }
         }
       }
     }
   }
+
   // .main-block__background
   &__background {
     // .main-block__background_01
@@ -144,5 +173,4 @@
     }
   }
 }
-
-//====================================================================================================
+//========================================================================================================================================================
