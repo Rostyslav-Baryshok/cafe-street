@@ -4,10 +4,10 @@
   // .main-block__container
   &__container {
     position: relative;
-    padding-top: rem(158);
-    padding-bottom: rem(396);
+    padding-top: 158px;
+    padding-bottom: 396px;
 
-    @media (min-width: rem(768)) {
+    @media (min-width: 768px) {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -24,9 +24,9 @@
     font-weight: 600;
     font-size: 48px;
     line-height: 1.5;
-    padding: rem(5);
-    max-width: rem(489);
-    margin-bottom: rem(24);
+    padding: 5px;
+    max-width: 489px;
+    margin-bottom: 24px;
     & span {
       color: $primaryColor;
     }
@@ -38,8 +38,8 @@
     font-size: 18px;
     line-height: 1.5;
     max-width: 393px;
-    padding: rem(5);
-    margin-bottom: rem(32);
+    padding: 5px;
+    margin-bottom: 32px;
     color: $secondLightColor;
   }
 
@@ -47,7 +47,7 @@
   &__box {
     display: flex;
     align-items: center;
-    gap: rem(26);
+    gap: 26px;
   }
 
   // .main-block__button
@@ -59,8 +59,8 @@
     &_icon {
       display: flex;
       align-items: center;
-      margin-left: rem(10);
-      padding: rem(5);
+      margin-left: 10px;
+      padding: 5px;
       border-radius: 50%;
       background-color: $primaryColor;
     }
@@ -71,7 +71,7 @@
     font-weight: 700;
     font-size: 12px;
     line-height: 1.5;
-    padding: rem(10) rem(24);
+    padding: 10px 24px;
     color: $primaryColor;
   }
 
@@ -81,11 +81,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: rem(416);
+    height: 416px;
     z-index: 1;
 
-    @media (min-width: em(768)) {
-      width: rem(526);
+    @media (min-width: 768px) {
+      width: 600px;
     }
   }
 
@@ -102,7 +102,7 @@
         font-weight: 600;
         font-size: 24px;
         line-height: 1.5;
-        padding: rem(10) rem(50);
+        padding: 10px 50px;
         border-radius: 42px;
         color: $secondColor;
         border: 6px solid rgba(253, 180, 112, 0.45);
@@ -111,8 +111,8 @@
 
         // .info-block__item_1
         &_1 {
-          top: 45px;
-          @include adaptiveValue("left", 1, 15, 2, 1050, 768);
+          @include adaptiveValue("top", 20, 10, 2, 1050, 768);
+          @include adaptiveValue("left", 40, 1, 2, 1050, 768);
 
           @media (max-width: $mobile) {
             @include adaptiveValue("top", 40, 30, 2, 767, 320);
@@ -122,8 +122,8 @@
 
         // .info-block__item_2
         &_2 {
-          @include adaptiveValue("top", 315, 335, 2, 1050, 768);
-          @include adaptiveValue("left", 60, 12, 2, 1050, 768);
+          @include adaptiveValue("top", 325, 345, 2, 1050, 768);
+          @include adaptiveValue("left", 55, 5, 2, 1050, 768);
 
           @media (max-width: $mobile) {
             @include adaptiveValue("top", 310, 323, 2, 767, 320);
@@ -135,22 +135,20 @@
         &_3 {
           display: flex;
           flex-direction: row-reverse;
-          @include adaptiveValue("top", 105, 315, 2, 1050, 768);
-          @include adaptiveValue("left", 345, 195, 2, 1050, 768);
+          @include adaptiveValue("top", 105, 295, 2, 1100, 768);
+          @include adaptiveValue("left", 415, 237, 2, 1100, 768);
 
           &::before {
             content: url(../img/icon-star.svg);
             position: relative;
             top: 2px;
-            margin-left: rem(4);
+            margin-left: 4px;
           }
 
           @media (max-width: $mobile) {
             // right: 30px;
             @include adaptiveValue("top", 105, 240, 2, 767, 320);
             @include adaptiveValue("left", 460, 113, 2, 767, 320);
-            // @include adaptiveValue("top", 105, 240, 2, 767, 320);
-            // @include adaptiveValue("left", 100, 113, 2, 767, 320);
           }
         }
       }
