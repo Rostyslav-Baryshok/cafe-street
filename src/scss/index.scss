@@ -6,6 +6,8 @@
     position: relative;
     padding-top: 158px;
     padding-bottom: 396px;
+    @include adaptiveValue("padding-top", 158, 100, 2, 1200, 320);
+    @include adaptiveValue("padding-bottom", 396, 300, 2, 1200, 320);
 
     @media (min-width: 768px) {
       display: flex;
@@ -17,16 +19,21 @@
   // .main-block__left
   &__left {
     z-index: 1;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 80px;
+      @include adaptiveValue("margin-bottom", 80, 30, 2, 767, 320);
+    }
   }
 
   // .main-block__title
   &__title {
     font-weight: 600;
-    font-size: 48px;
     line-height: 1.5;
     padding: 5px;
     max-width: 489px;
     margin-bottom: 24px;
+    @include adaptiveValue("font-size", 48, 40, 2, 1200, 320);
     & span {
       color: $primaryColor;
     }
@@ -35,12 +42,12 @@
   // .main-block__text
   &__text {
     font-weight: 400;
-    font-size: 18px;
     line-height: 1.5;
-    max-width: 393px;
+    max-width: 395px;
     padding: 5px;
     margin-bottom: 32px;
     color: $secondLightColor;
+    // @include adaptiveValue("font-size", 18, 16, 2, 1200, 320);
   }
 
   // .main-block__box
@@ -48,6 +55,11 @@
     display: flex;
     align-items: center;
     gap: 26px;
+
+    @media (max-width: 375px) {
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
   // .main-block__button
@@ -147,7 +159,7 @@
 
           @media (max-width: $mobile) {
             // right: 30px;
-            @include adaptiveValue("top", 105, 240, 2, 767, 320);
+            @include adaptiveValue("top", 105, 285, 2, 767, 320);
             @include adaptiveValue("left", 460, 113, 2, 767, 320);
           }
         }
