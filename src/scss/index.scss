@@ -18,11 +18,11 @@
 
   // .main-block__left
   &__left {
-    z-index: 1;
-
+    position: relative;
     @media (max-width: $mobile) {
       margin-bottom: 80px;
       @include adaptiveValue("margin-bottom", 80, 30, 2, 767, 320);
+      z-index: 1;
     }
   }
 
@@ -47,7 +47,11 @@
     padding: 5px;
     margin-bottom: 32px;
     color: $secondLightColor;
-    // @include adaptiveValue("font-size", 18, 16, 2, 1200, 320);
+    @include adaptiveValue("font-size", 18, 16, 2, 1200, 320);
+
+    @media (max-width: 450px) {
+      color: $mainColor;
+    }
   }
 
   // .main-block__box
@@ -64,6 +68,9 @@
 
   // .main-block__button
   &__button {
+    &:hover {
+      color: $primaryTwocolor;
+    }
     // .main-block__button_text
     &_text {
     }
@@ -84,7 +91,15 @@
     font-size: 12px;
     line-height: 1.5;
     padding: 10px 24px;
+    border: 2px solid transparent;
+    border-radius: 33px;
     color: $primaryColor;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      border: 2px solid #ff912b;
+      border-radius: 33px;
+    }
   }
 
   // .main-block__right
@@ -180,6 +195,9 @@
       position: absolute;
       left: 50vw;
       top: -40px;
+      @media (max-width: $mobile) {
+        opacity: 0.65;
+      }
     }
   }
 }

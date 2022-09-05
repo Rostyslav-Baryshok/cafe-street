@@ -36,7 +36,6 @@
 
   // .header__actions
   &__actions {
-    // position: relative;
     z-index: 5;
     display: flex;
     align-items: center;
@@ -51,10 +50,18 @@
   &__form {
     filter: drop-shadow(6px 2px 24px rgba(0, 0, 0, 0.13));
   }
-
   // .header__button
   &__button {
     @include adaptiveValue("margin-right", 16, 8, 2, 1170, 768);
+  }
+
+  .form-header {
+  }
+  .form {
+    // .form__input
+    &__input {
+      outline: none;
+    }
   }
 }
 

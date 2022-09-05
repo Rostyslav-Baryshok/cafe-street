@@ -5,10 +5,7 @@
 
 // Подключение шрифтов ===========================================================================================================================================================================================================================================================================
 //&display=swap - добавить при подключении через плагин
-
-// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,regular,500,600,700&display=swap");
-// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:regular,600&display=swap");
 // Подключить если есть локальные файлы шрифтов
 //@import "fonts/fonts";
@@ -28,6 +25,7 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 // Основные цвета
 $mainColor: #000; // Цвет шрифта по умолчанию
 $primaryColor: #ff912b;
+$primaryTwocolor: #ffd28f;
 
 $secondColor: #2f2105;
 $secondLightColor: #7e7d7a;
