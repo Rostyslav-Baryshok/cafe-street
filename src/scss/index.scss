@@ -138,6 +138,7 @@
           content: url(../img/main/main-icon-star.svg);
           position: relative;
           top: 2px;
+          margin-left: 4px;
         }
       }
 
@@ -214,58 +215,176 @@
     }
   }
 }
-//========================================================================================================================================================s
+//========================================================================================================================================================
 .pupular {
   // .pupular__container
   &__container {
+    margin-top: -311px;
   }
+
   // .pupular__title
   &__title {
+    margin-bottom: 32px;
   }
+
   // .pupular__body
   &__body {
+    display: flex;
+    justify-content: center;
+    gap: 38px;
   }
+
   // .pupular__column
   &__column {
+    display: flex;
+    justify-content: center;
+    width: 355px;
+    padding: 6px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.7) 100%
+    );
+    backdrop-filter: blur(4px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 12px;
   }
+
   // .pupular__item
   &__item {
   }
 }
-.title {
-}
+
 .item-pupular {
+  width: 343px;
+  border-radius: 12px;
+  background-color: $lightColor;
   // .item-pupular__image
   &__image {
+    position: relative;
+    padding-top: 24px;
+    display: flex;
+    justify-content: center;
   }
+
   // .item-pupular__ragint
   &__ragint {
   }
+
   // .item-pupular__content
   &__content {
+    padding: 19px 30px;
   }
+
+  // .item-pupular__wrap
+  &__wrap-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
   // .item-pupular__title
   &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+    color: $secondColor;
   }
+
   // .item-pupular__text
   &__text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+    color: $secondColor;
   }
+
   // .item-pupular__buttons
   &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
   }
+
+  // .item-pupular__wrap-buttons
+  &__wrap-buttons {
+  }
+
   // .item-pupular__button
   &__button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 4px 12px;
+    color: $primaryTwocolor;
+    border: 2px solid $primaryTwocolor;
+    border-radius: 8px;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      color: $primaryColor;
+      border-color: $primaryColor;
+    }
+
+    &_indent {
+      margin-right: 24px;
+    }
   }
+
   // .item-pupular__button-buy
   &__button-buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: $primaryColor;
   }
 }
+
 .ragint-popular {
   // .ragint-popular__body
   &__body {
+    position: absolute;
+    top: 31px;
+    left: 28px;
+    width: 70px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.4) 100%
+    );
+    backdrop-filter: blur(4px);
+    border-radius: 27px;
   }
+
   // .ragint-popular__text
   &__text {
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    padding: 3px 10px;
+    border-radius: 27px;
+    color: $secondColor;
+    background-color: $lightColor;
+
+    &::before {
+      position: relative;
+      content: url(../img/icon-star.svg);
+      margin-left: 4px;
+      top: 1px;
+    }
   }
 }
 

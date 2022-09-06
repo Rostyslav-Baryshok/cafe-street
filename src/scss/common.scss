@@ -12,4 +12,21 @@
   font-size: 32px;
   line-height: 1.5;
   color: $mainColor;
+
+  span {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 74px;
+      height: 4px;
+      border-radius: 12px;
+      background: $primaryColor;
+    }
+  }
+}
+
+a img {
+  border-radius: 12px;
 }
