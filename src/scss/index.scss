@@ -123,18 +123,40 @@
   // .main-block__info
   &__info {
     .info-block {
+      // .info-block__filter
+      &__filter {
+        padding: 10px 50px;
+        background-color: $lightColor;
+        border-radius: 50px;
+      }
+
+      // .info-block__filter-icon
+      &__filter-icon {
+        display: flex;
+        flex-direction: row-reverse;
+        &::before {
+          content: url(../img/icon-star.svg);
+          position: relative;
+          top: 2px;
+        }
+      }
+
       // .info-block__item
       &__item {
         position: absolute;
         font-weight: 600;
         font-size: 24px;
         line-height: 1.5;
-        padding: 10px 50px;
-        border-radius: 42px;
+        padding: 15px 6px;
         color: $secondColor;
-        border: 6px solid rgba(253, 180, 112, 0.45);
-        background-color: $lightColor;
-        box-shadow: 0px 0px 5px 0px;
+        backdrop-filter: blur(4px);
+        border-radius: 62px;
+        filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.16));
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.7) 0%,
+          rgba(255, 255, 255, 0.4) 100%
+        );
 
         // .info-block__item_1
         &_1 {
@@ -160,20 +182,11 @@
 
         // .info-block__item_3
         &_3 {
-          display: flex;
-          flex-direction: row-reverse;
+          padding: 6px 6px;
           @include adaptiveValue("top", 105, 295, 2, 1100, 768);
           @include adaptiveValue("left", 415, 237, 2, 1100, 768);
 
-          &::before {
-            content: url(../img/icon-star.svg);
-            position: relative;
-            top: 2px;
-            margin-left: 4px;
-          }
-
           @media (max-width: $mobile) {
-            // right: 30px;
             @include adaptiveValue("top", 105, 285, 2, 767, 320);
             @include adaptiveValue("left", 460, 113, 2, 767, 320);
           }
