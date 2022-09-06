@@ -135,7 +135,7 @@
         display: flex;
         flex-direction: row-reverse;
         &::before {
-          content: url(../img/icon-star.svg);
+          content: url(../img/main/main-icon-star.svg);
           position: relative;
           top: 2px;
         }
@@ -214,4 +214,59 @@
     }
   }
 }
+//========================================================================================================================================================s
+.pupular {
+  // .pupular__container
+  &__container {
+  }
+  // .pupular__title
+  &__title {
+  }
+  // .pupular__body
+  &__body {
+  }
+  // .pupular__column
+  &__column {
+  }
+  // .pupular__item
+  &__item {
+  }
+}
+.title {
+}
+.item-pupular {
+  // .item-pupular__image
+  &__image {
+  }
+  // .item-pupular__ragint
+  &__ragint {
+  }
+  // .item-pupular__content
+  &__content {
+  }
+  // .item-pupular__title
+  &__title {
+  }
+  // .item-pupular__text
+  &__text {
+  }
+  // .item-pupular__buttons
+  &__buttons {
+  }
+  // .item-pupular__button
+  &__button {
+  }
+  // .item-pupular__button-buy
+  &__button-buy {
+  }
+}
+.ragint-popular {
+  // .ragint-popular__body
+  &__body {
+  }
+  // .ragint-popular__text
+  &__text {
+  }
+}
+
 //========================================================================================================================================================
