@@ -141,6 +141,9 @@ h6 {
   padding: 0.8125rem 2rem;
   -webkit-box-shadow: 0px 4px 32px rgba(223, 195, 124, 0.25);
           box-shadow: 0px 4px 32px rgba(223, 195, 124, 0.25);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .button._fw {
@@ -164,6 +167,13 @@ h6 {
 [class*=-ibg_contain] img {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.5;
+  color: #000;
 }
 
 .header {
@@ -217,6 +227,10 @@ h6 {
           filter: drop-shadow(6px 2px 24px rgba(0, 0, 0, 0.13));
 }
 
+.header .form__input {
+  outline: none;
+}
+
 .menu {
   padding: 0 10px;
 }
@@ -265,7 +279,7 @@ h6 {
 }
 
 .main-block__left {
-  z-index: 1;
+  position: relative;
 }
 
 .main-block__title {
@@ -299,6 +313,10 @@ h6 {
   gap: 26px;
 }
 
+.main-block__button:hover {
+  color: #ffd28f;
+}
+
 .main-block__button_icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -317,7 +335,17 @@ h6 {
   font-size: 12px;
   line-height: 1.5;
   padding: 10px 24px;
+  border: 2px solid transparent;
+  border-radius: 33px;
   color: #ff912b;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.main-block__link:hover {
+  border: 2px solid #ff912b;
+  border-radius: 33px;
 }
 
 .main-block__right {
@@ -335,21 +363,13 @@ h6 {
   z-index: 1;
 }
 
-.main-block__info .info-block__item {
-  position: absolute;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.5;
+.main-block__info .info-block__filter {
   padding: 10px 50px;
-  border-radius: 42px;
-  color: #2f2105;
-  border: 6px solid rgba(253, 180, 112, 0.45);
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 5px 0px;
-          box-shadow: 0px 0px 5px 0px;
+  border-radius: 50px;
 }
 
-.main-block__info .info-block__item_3 {
+.main-block__info .info-block__filter-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,11 +379,31 @@ h6 {
           flex-direction: row-reverse;
 }
 
-.main-block__info .info-block__item_3::before {
-  content: url(../img/icon-star.svg);
+.main-block__info .info-block__filter-icon::before {
+  content: url(../img/main/main-icon-star.svg);
   position: relative;
   top: 2px;
-  margin-left: 4px;
+}
+
+.main-block__info .info-block__item {
+  position: absolute;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  padding: 15px 6px;
+  color: #2f2105;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 62px;
+  -webkit-filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.16));
+          filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.16));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.4)));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+.main-block__info .info-block__item_3 {
+  padding: 6px 6px;
 }
 
 .main-block__background_01 {
@@ -470,6 +510,10 @@ h6 {
   .main-block__title {
     font-size: 3rem;
   }
+
+  .main-block__text {
+    font-size: 1.125rem;
+  }
 }
 
 @media (max-width: 48em) {
@@ -481,6 +525,12 @@ h6 {
 @media (max-width: 520px) {
   .header__actions {
     display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-block__text {
+    color: #000;
   }
 }
 
@@ -634,6 +684,11 @@ h6 {
 
   .main-block__left {
     margin-bottom: 80px;
+    z-index: 1;
+  }
+
+  .main-block__background_02 {
+    opacity: 0.65;
   }
 }
 
@@ -719,6 +774,18 @@ h6 {
 @supports not (font-size: clamp( 2.5rem , 2.3181818182rem  +  0.9090909091vw , 3rem )) {
     .main-block__title {
       font-size: calc(2.5rem + 0.5 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (font-size: clamp( 1rem , 0.9545454545rem  +  0.2272727273vw , 1.125rem )) {
+    .main-block__text {
+      font-size: clamp( 1rem , 0.9545454545rem  +  0.2272727273vw , 1.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.9545454545rem  +  0.2272727273vw , 1.125rem )) {
+    .main-block__text {
+      font-size: calc(1rem + 0.125 * (100vw - 20rem) / 55);
     }
 }
 }
