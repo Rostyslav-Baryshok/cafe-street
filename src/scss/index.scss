@@ -201,13 +201,13 @@
     // .main-block__background_01
     &_01 {
       position: absolute;
-      left: -9vw;
+      left: -9%;
       top: 554px;
     }
     // .main-block__background_02
     &_02 {
       position: absolute;
-      left: 50vw;
+      left: 62%;
       top: -40px;
       @media (max-width: $mobile) {
         opacity: 0.65;
@@ -217,6 +217,19 @@
 }
 //========================================================================================================================================================
 .pupular {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    max-width: $maxWidth;
+    height: 367px;
+    left: 50%;
+    top: 850px;
+    border-radius: 64px;
+    transform: translate(-50%, 0);
+    background-color: $sectionTwoColor;
+    // clip-path: polygon(0 -2%, 100% 30%, 100% 100%, 0% 100%);
+  }
   // .pupular__container
   &__container {
     margin-top: -311px;
