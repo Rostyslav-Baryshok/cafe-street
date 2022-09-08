@@ -68,8 +68,11 @@
 
   // .main-block__button
   &__button {
+    border: 2px solid $secondColor;
     &:hover {
-      color: $primaryTwocolor;
+      color: $mainColor;
+      border: 2px solid #ff912b;
+      background-color: $sectionColor;
     }
     // .main-block__button_text
     &_text {
@@ -158,7 +161,11 @@
           rgba(255, 255, 255, 0.7) 0%,
           rgba(255, 255, 255, 0.4) 100%
         );
+        transition: all 0.3s ease 0s;
 
+        &:hover {
+          transform: scale(1.07);
+        }
         // .info-block__item_1
         &_1 {
           @include adaptiveValue("top", 20, 10, 2, 1050, 768);
@@ -275,6 +282,13 @@
     padding-top: 24px;
     display: flex;
     justify-content: center;
+
+    &:hover img {
+      transform: scale(1.03);
+    }
+    img {
+      transition: all 0.3s ease 0s;
+    }
   }
 
   // .item-pupular__ragint
@@ -350,6 +364,11 @@
     height: 43px;
     border-radius: 50%;
     background-color: $primaryColor;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      background-color: $primaryTwocolor;
+    }
   }
 }
 
