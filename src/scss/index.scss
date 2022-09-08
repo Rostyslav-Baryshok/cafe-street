@@ -242,17 +242,20 @@
 
   // .pupular__body
   &__body {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 355px);
+    gap: 40px 30px;
     justify-content: center;
-    gap: 38px;
-    flex-wrap: wrap;
+
+    &::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
   }
 
   // .pupular__column
   &__column {
-    display: flex;
-    justify-content: center;
-    width: 355px;
     padding: 6px;
     background: linear-gradient(
       180deg,
