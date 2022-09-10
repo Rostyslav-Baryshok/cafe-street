@@ -212,6 +212,9 @@
       position: absolute;
       left: -9%;
       top: 554px;
+      @media (max-width: 930px) {
+        opacity: 0.65;
+      }
     }
     // .main-block__background_02
     &_02 {
@@ -230,6 +233,7 @@
   // .pupular__container
   &__container {
     margin-top: -311px;
+    @include adaptiveValue("margin-top", -311, -270, 0, 1440, 320);
   }
 
   // .pupular__title
@@ -239,17 +243,22 @@
 
   // .pupular__body
   &__body {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 355px);
-    gap: 40px 30px;
+    display: flex;
+    @include adaptiveValue("column-gap", 30, 15, 0, 1440, 768);
+    @include adaptiveValue("row-gap", 40, 20, 0, 1440, 768);
     justify-content: center;
-
     border-radius: 64px;
     background-color: $sectionTwoColor;
+
+    @media (max-width: $mobile) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 236px);
+    }
   }
 
   // .pupular__column
   &__column {
+    display: flex;
     padding: 6px;
     margin-top: -87px;
     margin-bottom: 87px;
@@ -268,14 +277,18 @@
 }
 
 .item-pupular {
-  width: 343px;
+  max-width: 343px;
   border-radius: 12px;
   background-color: $lightColor;
 
-  // .item-pupular__image
-  &__image {
+  // .item-pupular__link
+  &__link {
     position: relative;
-    padding-top: 24px;
+    @include adaptiveValue("padding-top", 24, 8, 0, 1440, 768);
+    @include adaptiveValue("padding-left", 18, 8, 0, 1440, 768);
+    @include adaptiveValue("padding-bottom", 19, 8, 0, 1440, 768);
+    @include adaptiveValue("padding-right", 18, 8, 0, 1440, 768);
+    padding: 24px 18px 19px;
     display: flex;
     justify-content: center;
 
@@ -283,6 +296,7 @@
       transform: scale(1.03);
     }
     img {
+      width: 100%;
       transition: all 0.3s ease 0s;
     }
   }
@@ -293,7 +307,9 @@
 
   // .item-pupular__content
   &__content {
-    padding: 19px 30px;
+    padding-bottom: 19px;
+    @include adaptiveValue("padding-left", 31, 15, 0, 1440, 768);
+    @include adaptiveValue("padding-right", 31, 15, 0, 1440, 768);
   }
 
   // .item-pupular__wrap
@@ -305,7 +321,7 @@
   // .item-pupular__title
   &__title {
     font-weight: 600;
-    font-size: 24px;
+    @include adaptiveValue("font-size", 24, 18, 0, 1440, 768);
     line-height: 1.5;
     color: $secondColor;
   }
@@ -313,7 +329,7 @@
   // .item-pupular__text
   &__text {
     font-weight: 700;
-    font-size: 24px;
+    @include adaptiveValue("font-size", 24, 18, 0, 1440, 768);
     line-height: 1.5;
     color: $secondColor;
   }
@@ -333,7 +349,7 @@
   // .item-pupular__button
   &__button {
     font-weight: 600;
-    font-size: 16px;
+    @include adaptiveValue("font-size", 16, 14, 0, 1440, 768);
     line-height: 1.5;
     padding: 4px 12px;
     color: $primaryTwocolor;
@@ -347,7 +363,8 @@
     }
 
     &_indent {
-      margin-right: 24px;
+      // margin-right: 24px;
+      @include adaptiveValue("margin-right", 24, 10, 0, 1440, 768);
     }
   }
 
@@ -356,8 +373,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 43px;
-    height: 43px;
+    @include adaptiveValue("width", 43, 37, 0, 1440, 768);
+    @include adaptiveValue("height", 43, 37, 0, 1440, 768);
     border-radius: 50%;
     background-color: $primaryColor;
     transition: all 0.3s ease 0s;
@@ -372,8 +389,8 @@
   // .ragint-popular__body
   &__body {
     position: absolute;
-    top: 31px;
-    left: 28px;
+    @include adaptiveValue("top", 31, 15, 0, 1440, 768);
+    @include adaptiveValue("left", 28, 15, 0, 1440, 768);
     width: 70px;
     height: 34px;
     display: flex;
