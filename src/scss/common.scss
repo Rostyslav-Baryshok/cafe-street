@@ -5,6 +5,8 @@
   }
   &__popular {
   }
+  &__service {
+  }
 }
 //========================================================================================================================================================
 .title {
@@ -19,7 +21,7 @@
       content: "";
       position: absolute;
       bottom: 0;
-      width: 74px;
+      width: 100%;
       height: 4px;
       border-radius: 12px;
       background: $primaryColor;
@@ -29,4 +31,7 @@
 
 a img {
   border-radius: 12px;
+}
+
+h3 {
 }

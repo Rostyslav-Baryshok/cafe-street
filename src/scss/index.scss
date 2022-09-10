@@ -274,159 +274,207 @@
   // .pupular__item
   &__item {
   }
-}
 
-.item-pupular {
-  max-width: 343px;
-  border-radius: 12px;
-  background-color: $lightColor;
-
-  // .item-pupular__link
-  &__link {
-    position: relative;
-    @include adaptiveValue("padding-top", 24, 8, 0, 1440, 768);
-    @include adaptiveValue("padding-left", 18, 8, 0, 1440, 768);
-    @include adaptiveValue("padding-bottom", 19, 8, 0, 1440, 768);
-    @include adaptiveValue("padding-right", 18, 8, 0, 1440, 768);
-    padding: 24px 18px 19px;
-    display: flex;
-    justify-content: center;
-
-    &:hover img {
-      transform: scale(1.03);
-    }
-    img {
-      width: 100%;
-      transition: all 0.3s ease 0s;
-    }
-  }
-
-  // .item-pupular__ragint
-  &__ragint {
-  }
-
-  // .item-pupular__content
-  &__content {
-    padding-bottom: 19px;
-    @include adaptiveValue("padding-left", 31, 15, 0, 1440, 768);
-    @include adaptiveValue("padding-right", 31, 15, 0, 1440, 768);
-  }
-
-  // .item-pupular__wrap
-  &__wrap-content {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  // .item-pupular__title
-  &__title {
-    font-weight: 600;
-    @include adaptiveValue("font-size", 24, 18, 0, 1440, 768);
-    line-height: 1.5;
-    color: $secondColor;
-  }
-
-  // .item-pupular__text
-  &__text {
-    font-weight: 700;
-    @include adaptiveValue("font-size", 24, 18, 0, 1440, 768);
-    line-height: 1.5;
-    color: $secondColor;
-  }
-
-  // .item-pupular__buttons
-  &__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 6px;
-  }
-
-  // .item-pupular__wrap-buttons
-  &__wrap-buttons {
-  }
-
-  // .item-pupular__button
-  &__button {
-    font-weight: 600;
-    @include adaptiveValue("font-size", 16, 14, 0, 1440, 768);
-    line-height: 1.5;
-    padding: 4px 12px;
-    color: $primaryTwocolor;
-    border: 2px solid $primaryTwocolor;
-    border-radius: 8px;
-    transition: all 0.3s ease 0s;
-
-    &:hover {
-      color: $primaryColor;
-      border-color: $primaryColor;
-    }
-
-    &_indent {
-      // margin-right: 24px;
-      @include adaptiveValue("margin-right", 24, 10, 0, 1440, 768);
-    }
-  }
-
-  // .item-pupular__button-buy
-  &__button-buy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include adaptiveValue("width", 43, 37, 0, 1440, 768);
-    @include adaptiveValue("height", 43, 37, 0, 1440, 768);
-    border-radius: 50%;
-    background-color: $primaryColor;
-    transition: all 0.3s ease 0s;
-
-    &:hover {
-      background-color: $primaryTwocolor;
-    }
-  }
-}
-
-.ragint-popular {
-  // .ragint-popular__body
-  &__body {
-    position: absolute;
-    @include adaptiveValue("top", 31, 15, 0, 1440, 768);
-    @include adaptiveValue("left", 28, 15, 0, 1440, 768);
-    width: 70px;
-    height: 34px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.7) 0%,
-      rgba(255, 255, 255, 0.4) 100%
-    );
-    backdrop-filter: blur(4px);
-    border-radius: 27px;
-  }
-
-  // .ragint-popular__text
-  &__text {
-    position: absolute;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    padding: 3px 10px;
-    border-radius: 27px;
-    color: $secondColor;
+  .item-pupular {
+    max-width: 343px;
+    border-radius: 12px;
     background-color: $lightColor;
 
-    &::before {
+    // .item-pupular__link
+    &__link {
       position: relative;
-      content: url(../img/icon-star.svg);
-      margin-left: 4px;
-      top: 1px;
+      @include adaptiveValue("padding-top", 24, 8, 0, 1440, 768);
+      @include adaptiveValue("padding-left", 18, 8, 0, 1440, 768);
+      @include adaptiveValue("padding-bottom", 19, 8, 0, 1440, 768);
+      @include adaptiveValue("padding-right", 18, 8, 0, 1440, 768);
+      padding: 24px 18px 19px;
+      display: flex;
+      justify-content: center;
+
+      &:hover img {
+        transform: scale(1.03);
+      }
+      img {
+        width: 100%;
+        transition: all 0.3s ease 0s;
+      }
+    }
+
+    // .item-pupular__ragint
+    &__ragint {
+    }
+
+    // .item-pupular__content
+    &__content {
+      padding-bottom: 19px;
+      @include adaptiveValue("padding-left", 31, 15, 0, 1440, 768);
+      @include adaptiveValue("padding-right", 31, 15, 0, 1440, 768);
+    }
+
+    // .item-pupular__wrap
+    &__wrap-content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    // .item-pupular__title
+    &__title {
+      font-weight: 600;
+      @include adaptiveValue("font-size", 24, 18, 0, 1440, 768);
+      line-height: 1.5;
+      color: $secondColor;
+    }
+
+    // .item-pupular__text
+    &__text {
+      font-weight: 700;
+      @include adaptiveValue("font-size", 24, 18, 0, 1440, 768);
+      line-height: 1.5;
+      color: $secondColor;
+    }
+
+    // .item-pupular__buttons
+    &__buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 6px;
+    }
+
+    // .item-pupular__wrap-buttons
+    &__wrap-buttons {
+    }
+
+    // .item-pupular__button
+    &__button {
+      font-weight: 600;
+      @include adaptiveValue("font-size", 16, 14, 0, 1440, 768);
+      line-height: 1.5;
+      padding: 4px 12px;
+      color: $primaryTwocolor;
+      border: 2px solid $primaryTwocolor;
+      border-radius: 8px;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        color: $primaryColor;
+        border-color: $primaryColor;
+      }
+
+      &_indent {
+        @include adaptiveValue("margin-right", 24, 10, 0, 1440, 768);
+      }
+    }
+
+    // .item-pupular__button-buy
+    &__button-buy {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include adaptiveValue("width", 43, 37, 0, 1440, 768);
+      @include adaptiveValue("height", 43, 37, 0, 1440, 768);
+      border-radius: 50%;
+      background-color: $primaryColor;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        background-color: $primaryTwocolor;
+      }
+    }
+  }
+
+  .ragint-popular {
+    // .ragint-popular__body
+    &__body {
+      position: absolute;
+      @include adaptiveValue("top", 31, 15, 0, 1440, 768);
+      @include adaptiveValue("left", 28, 15, 0, 1440, 768);
+      width: 70px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.7) 0%,
+        rgba(255, 255, 255, 0.4) 100%
+      );
+      backdrop-filter: blur(4px);
+      border-radius: 27px;
+    }
+
+    // .ragint-popular__text
+    &__text {
+      position: absolute;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+      padding: 3px 10px;
+      border-radius: 27px;
+      color: $secondColor;
+      background-color: $lightColor;
+
+      &::before {
+        position: relative;
+        content: url(../img/icon-star.svg);
+        margin-left: 4px;
+        top: 1px;
+      }
     }
   }
 }
+//========================================================================================================================================================
+.service {
+  @include adaptiveValue("padding-top", 120, 60, 0, 1440, 768);
+  @include adaptiveValue("padding-bottom", 120, 60, 0, 1440, 768);
+  // .service__container
+  &__container {
+  }
+  // .service__title
+  &__title {
+    margin-bottom: 32px;
+  }
+  // .service__body
+  &__body {
+    display: flex;
+    justify-content: space-around;
 
+    @media (max-width: $mobile) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 255px);
+    }
+  }
+  // .service__column
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 24px;
+  }
+
+  .column {
+    // .column__img
+    &__img {
+      margin-bottom: 15px;
+    }
+    // .column__title
+    &__title {
+      @include adaptiveValue("font-size", 24, 18, 0, 1440, 768);
+      font-weight: 600;
+      line-height: 1.5;
+      color: #2f2105;
+      margin-bottom: 8px;
+    }
+    // .column__text
+    &__text {
+      font-weight: 400;
+      @include adaptiveValue("font-size", 18, 14, 0, 1440, 768);
+      line-height: 1.5;
+    }
+  }
+}
 //========================================================================================================================================================
