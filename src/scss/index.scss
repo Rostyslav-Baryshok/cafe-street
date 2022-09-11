@@ -430,7 +430,7 @@
 //========================================================================================================================================================
 .service {
   @include adaptiveValue("padding-top", 120, 60, 0, 1440, 768);
-  @include adaptiveValue("padding-bottom", 120, 60, 0, 1440, 768);
+  @include adaptiveValue("padding-bottom", 208, 104, 0, 1440, 768);
   // .service__container
   &__container {
   }
@@ -474,6 +474,83 @@
       font-weight: 400;
       @include adaptiveValue("font-size", 18, 14, 0, 1440, 768);
       line-height: 1.5;
+    }
+  }
+}
+//========================================================================================================================================================
+.about {
+  height: 484px;
+  // background-image: url(../img/about/background-about.png);
+  background-color: $sectionColor;
+  // opacity: 0.5;
+  // .about__container
+  &__container {
+    position: relative;
+  }
+
+  // .about__image
+  &__image {
+    position: absolute;
+    margin-top: -88px;
+    margin-bottom: 63px;
+    width: 370px;
+    left: 100px;
+    padding: 6px 0;
+    text-align: center;
+    border-radius: 15px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.4) 100%
+    );
+    filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.16));
+
+    & img {
+      border-radius: 15px;
+    }
+  }
+
+  // .about__content
+  &__content {
+    position: absolute;
+    top: 84px;
+    right: 40px;
+  }
+
+  // .about__title
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  // .about__subtitle
+  &__subtitle {
+    max-width: 348px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  // .about__text
+  &__text {
+    max-width: 478px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $secondLightColor;
+    margin-bottom: 32px;
+  }
+
+  // .about__button
+  &__button {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $primaryColor;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      color: $lightColor;
     }
   }
 }
