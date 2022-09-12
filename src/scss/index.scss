@@ -597,16 +597,16 @@
   // .special-menu__body
   &__body {
     display: grid;
-    justify-items: center;
+    justify-content: center;
     @include adaptiveValue("gap", 40, 25, 0, 1200, 768);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, 343px);
 
     @media (max-width: $mobile) {
-      grid-template-columns: repeat(2, 1fr);
+      // grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 550px) {
-      grid-template-columns: repeat(1, 1fr);
+    @media (max-width: 375px) {
+      grid-template-columns: repeat(auto-fill, 290px);
     }
   }
 
