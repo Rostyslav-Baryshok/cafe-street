@@ -430,7 +430,7 @@
 //========================================================================================================================================================
 .service {
   @include adaptiveValue("padding-top", 120, 60, 0, 1440, 768);
-  @include adaptiveValue("padding-bottom", 208, 104, 0, 1440, 768);
+  @include adaptiveValue("padding-bottom", 208, 60, 0, 1440, 768);
   // .service__container
   &__container {
   }
@@ -480,12 +480,20 @@
 //========================================================================================================================================================
 .about {
   height: 484px;
-  // background-image: url(../img/about/background-about.png);
-  background-color: $sectionColor;
-  // opacity: 0.5;
+  width: 100%;
+  background-image: url(../img/about/bg-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $mobile) {
+    height: 100%;
+  }
+
   // .about__container
   &__container {
-    position: relative;
+    @media (min-width: 768px) {
+      position: relative;
+    }
   }
 
   // .about__image
@@ -494,7 +502,8 @@
     margin-top: -88px;
     margin-bottom: 63px;
     width: 370px;
-    left: 100px;
+    @include adaptiveValue("left", 100, 20, 0, 1200, 768);
+    // left: 100px;
     padding: 6px 0;
     text-align: center;
     border-radius: 15px;
@@ -508,13 +517,25 @@
     & img {
       border-radius: 15px;
     }
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
-  // .about__content
+  // .about__contentf
   &__content {
-    position: absolute;
-    top: 84px;
-    right: 40px;
+    @media (min-width: 768px) {
+      position: absolute;
+      top: 84px;
+      @include adaptiveValue("right", 40, 20, 0, 1200, 768);
+    }
+    @media (max-width: $mobile) {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 32px 0;
+    }
   }
 
   // .about__title
@@ -524,21 +545,27 @@
 
   // .about__subtitle
   &__subtitle {
-    max-width: 348px;
     font-weight: 600;
-    font-size: 24px;
+    @include adaptiveValue("font-size", 24, 20, 0, 1440, 768);
     line-height: 1.5;
     margin-bottom: 16px;
+
+    @media (min-width: $mobile) {
+      @include adaptiveValue("max-width", 348, 300, 0, 1440, 768);
+    }
   }
 
   // .about__text
   &__text {
-    max-width: 478px;
     font-weight: 400;
-    font-size: 18px;
+    @include adaptiveValue("font-size", 18, 16, 0, 1440, 768);
     line-height: 1.5;
     color: $secondLightColor;
     margin-bottom: 32px;
+
+    @media (min-width: $mobile) {
+      @include adaptiveValue("max-width", 478, 325, 0, 1440, 768);
+    }
   }
 
   // .about__button
