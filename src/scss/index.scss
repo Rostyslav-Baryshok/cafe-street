@@ -600,12 +600,12 @@
     grid-template-columns: repeat(3, 1fr);
     @include adaptiveValue("gap", 40, 25, 0, 1200, 768);
 
-    @media (max-width: $mobile) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
     @media (max-width: 550px) {
       grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
