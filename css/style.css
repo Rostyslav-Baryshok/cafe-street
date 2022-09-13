@@ -759,7 +759,7 @@ a img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  grid-template-columns: repeat(auto-fill, 343px);
+  grid-template-columns: repeat(auto-fill, 344px);
 }
 
 .special-menu__column {
@@ -768,7 +768,6 @@ a img {
 }
 
 .special-menu .item-special-menu {
-  max-width: 343px;
   border-radius: 12px;
   background-color: #fff;
 }
