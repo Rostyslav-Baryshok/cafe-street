@@ -599,11 +599,7 @@
     display: grid;
     justify-content: center;
     @include adaptiveValue("gap", 40, 25, 0, 1200, 768);
-    grid-template-columns: repeat(auto-fill, 343px);
-
-    @media (max-width: $mobile) {
-      // grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: repeat(auto-fill, 344px);
 
     @media (max-width: 375px) {
       grid-template-columns: repeat(auto-fill, 290px);
@@ -623,7 +619,7 @@
   }
 
   .item-special-menu {
-    max-width: 343px;
+    // max-width: 344px;
     border-radius: 12px;
     background-color: $lightColor;
 
