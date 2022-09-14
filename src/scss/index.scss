@@ -745,3 +745,40 @@
   }
 }
 //========================================================================================================================================================
+.feedbacks {
+  position: relative;
+  height: 484px;
+  background-repeat: no-repeat;
+  background-image: url(../img/feedbacks/bg-image-feedbacks.png);
+
+  // .feedbacks__container
+  &__container {
+  }
+  // .feedbacks__body
+  &__body {
+  }
+  // .feedbacks__content
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+  }
+  // .feedbacks__title
+  &__title {
+    margin-bottom: 16px;
+  }
+  // .feedbacks__text
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 352px;
+    color: $secondLightColor;
+  }
+  // .feedbacks__slider
+  &__slider {
+  }
+}
+
+//========================================================================================================================================================
