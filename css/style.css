@@ -769,9 +769,6 @@ a img {
 
 .special-menu .item-special-menu__link {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .special-menu .item-special-menu__link:hover img {
