@@ -243,22 +243,31 @@
 
   // .pupular__body
   &__body {
-    display: flex;
-    @include adaptiveValue("column-gap", 30, 15, 0, 1440, 768);
-    @include adaptiveValue("row-gap", 40, 20, 0, 1440, 768);
-    justify-content: center;
+    // display: flex;
+    // @include adaptiveValue("column-gap", 30, 15, 0, 1440, 768);
+    // @include adaptiveValue("row-gap", 40, 20, 0, 1440, 768);
+    // justify-content: center;
     border-radius: 64px;
     background-color: $sectionTwoColor;
 
-    @media (max-width: $mobile) {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, 236px);
+    // @media (max-width: $mobile) {
+    //   display: grid;
+    //   grid-template-columns: repeat(auto-fill, 236px);
+    // }
+    display: grid;
+    justify-content: center;
+    @include adaptiveValue("gap", 40, 25, 0, 1200, 768);
+    grid-template-columns: repeat(auto-fill, 344px);
+
+    @media (max-width: 375px) {
+      grid-template-columns: repeat(auto-fill, 290px);
     }
   }
 
   // .pupular__column
   &__column {
-    display: flex;
+    // display: flex;
+    // justify-content: center;
     padding: 6px;
     margin-top: -87px;
     margin-bottom: 87px;
@@ -276,18 +285,18 @@
   }
 
   .item-pupular {
-    max-width: 343px;
+    max-width: 344px;
     border-radius: 12px;
     background-color: $lightColor;
 
     // .item-pupular__link
     &__link {
       position: relative;
-      @include adaptiveValue("padding-top", 24, 8, 0, 1440, 768);
-      @include adaptiveValue("padding-left", 18, 8, 0, 1440, 768);
-      @include adaptiveValue("padding-bottom", 19, 8, 0, 1440, 768);
-      @include adaptiveValue("padding-right", 18, 8, 0, 1440, 768);
-      padding: 24px 18px 19px;
+      @include adaptiveValue("padding-top", 24, 12, 0, 1440, 768);
+      @include adaptiveValue("padding-left", 18, 12, 0, 1440, 768);
+      @include adaptiveValue("padding-bottom", 19, 12, 0, 1440, 768);
+      @include adaptiveValue("padding-right", 18, 12, 0, 1440, 768);
+      // padding: 24px 18px 19px;
       display: flex;
       justify-content: center;
 
@@ -387,8 +396,8 @@
     // .ragint-popular__body
     &__body {
       position: absolute;
-      @include adaptiveValue("top", 31, 15, 0, 1440, 768);
-      @include adaptiveValue("left", 28, 15, 0, 1440, 768);
+      @include adaptiveValue("top", 37, 20, 0, 1440, 768);
+      @include adaptiveValue("left", 35, 22, 0, 1440, 768);
       width: 70px;
       height: 34px;
       display: flex;
@@ -626,11 +635,11 @@
     // .item-special-menu__link
     &__link {
       position: relative;
-      @include adaptiveValue("padding-top", 24, 8, 0, 1440, 768);
-      @include adaptiveValue("padding-left", 18, 8, 0, 1440, 768);
-      @include adaptiveValue("padding-bottom", 19, 8, 0, 1440, 768);
-      @include adaptiveValue("padding-right", 18, 8, 0, 1440, 768);
-      padding: 24px 18px 19px;
+      @include adaptiveValue("padding-top", 24, 12, 0, 1440, 768);
+      @include adaptiveValue("padding-left", 18, 12, 0, 1440, 768);
+      @include adaptiveValue("padding-bottom", 19, 12, 0, 1440, 768);
+      @include adaptiveValue("padding-right", 18, 12, 0, 1440, 768);
+      // padding: 24px 18px 19px;
       display: flex;
       justify-content: center;
 
@@ -704,12 +713,13 @@
       }
     }
   }
-  .ragint-popular {
-    // .ragint-popular__body
+
+  .ragint-special-menu {
+    // .ragint-special-menu__body
     &__body {
       position: absolute;
-      @include adaptiveValue("top", 31, 15, 0, 1440, 768);
-      @include adaptiveValue("left", 28, 15, 0, 1440, 768);
+      @include adaptiveValue("top", 37, 20, 0, 1440, 768);
+      @include adaptiveValue("left", 35, 22, 0, 1440, 768);
       width: 70px;
       height: 34px;
       display: flex;
@@ -723,7 +733,7 @@
       backdrop-filter: blur(4px);
       border-radius: 27px;
     }
-    // .ragint-popular__text
+    // .ragint-special-menu__text
     &__text {
       position: absolute;
       display: flex;
