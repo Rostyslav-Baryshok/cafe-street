@@ -735,13 +735,15 @@ a img {
   font-size: 12px;
   line-height: 1.5;
   color: #ff912b;
+  border: 2px solid transparent;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
 .about__button:hover {
-  color: #fff;
+  border: 2px solid #ff912b;
+  background-color: transparent;
 }
 
 .special-menu__title {
@@ -906,6 +908,36 @@ a img {
   content: url(../img/icon-star.svg);
   margin-left: 4px;
   top: 1px;
+}
+
+.no-webp .feedbacks{
+  background-image: url(../img/feedbacks/bg-image-feedbacks.png); }
+
+.feedbacks {
+  position: relative;
+  height: 484px;
+  background-repeat: no-repeat;
+}
+
+.feedbacks__content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.feedbacks__title {
+  margin-bottom: 16px;
+}
+
+.feedbacks__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 352px;
+  color: #7e7d7a;
 }
 
 @media (min-width: 47.99875em) and (min-width: 90em) {
@@ -2480,3 +2512,5 @@ a img {
 }
 
 .webp .about{ background-image: url(../img/about/bg-image.webp); }
+
+.webp .feedbacks{ background-image: url(../img/feedbacks/bg-image-feedbacks.webp); }
