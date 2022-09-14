@@ -769,6 +769,12 @@ a img {
 
 .special-menu .item-special-menu__link {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .special-menu .item-special-menu__link:hover img {
