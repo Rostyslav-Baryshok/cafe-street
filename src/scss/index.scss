@@ -570,10 +570,12 @@
     font-size: 12px;
     line-height: 1.5;
     color: $primaryColor;
+    border: 2px solid transparent;
     transition: all 0.3s ease 0s;
 
     &:hover {
-      color: $lightColor;
+      border: 2px solid $primaryColor;
+      background-color: transparent;
     }
   }
 }
