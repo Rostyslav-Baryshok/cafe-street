@@ -379,8 +379,8 @@
     }
   }
 
-  .ragint-popular {
-    // .ragint-popular__body
+  .rating-popular {
+    // .rating-popular__body
     &__body {
       position: absolute;
       @include adaptiveValue("top", 37, 20, 0, 1440, 768);
@@ -399,7 +399,7 @@
       border-radius: 27px;
     }
 
-    // .ragint-popular__text
+    // .rating-popular__text
     &__text {
       position: absolute;
       display: flex;
@@ -698,8 +698,8 @@
     }
   }
 
-  .ragint-special-menu {
-    // .ragint-special-menu__body
+  .rating-special-menu {
+    // .rating-special-menu__body
     &__body {
       position: absolute;
       @include adaptiveValue("top", 37, 20, 0, 1440, 768);
@@ -717,7 +717,7 @@
       backdrop-filter: blur(4px);
       border-radius: 27px;
     }
-    // .ragint-special-menu__text
+    // .rating-special-menu__text
     &__text {
       position: absolute;
       display: flex;
