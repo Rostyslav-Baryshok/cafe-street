@@ -911,7 +911,7 @@ a img {
 }
 
 .no-webp .feedbacks{
-  background-image: url(../img/feedbacks/bg-image-feedbacks.png); }
+  background-image: url(../img/feedbacks/bg-image-01.png); }
 
 .feedbacks {
   position: relative;
@@ -2513,4 +2513,4 @@ a img {
 
 .webp .about{ background-image: url(../img/about/bg-image.webp); }
 
-.webp .feedbacks{ background-image: url(../img/feedbacks/bg-image-feedbacks.webp); }
+.webp .feedbacks{ background-image: url(../img/feedbacks/bg-image-01.webp); }
