@@ -776,8 +776,18 @@
     max-width: 352px;
     color: $secondLightColor;
   }
-  // .feedbacks__slider
-  &__slider {
+
+  // .feedbacks__swiper
+  &__swiper {
+  }
+  .swiper {
+    // .swiper__column
+    &__column {
+    }
+
+    // .swiper__image
+    &__image {
+    }
   }
 }
 
