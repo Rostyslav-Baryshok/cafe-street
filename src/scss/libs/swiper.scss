@@ -21,7 +21,7 @@
 }
 .swiper {
   position: absolute;
-  width: 850px;
+  width: 885px;
   height: 315px;
   top: 50%;
   right: 0;
@@ -48,9 +48,9 @@
 .swiper-android .swiper-slide,
 .swiper-wrapper {
   transform: translate3d(0px, 0, 0);
-  &:not(:last-child) {
-    margin-right: 13px;
-  }
+  // &:not(:last-child) {
+  //   margin-right: 13px;
+  // }
 }
 .swiper-pointer-events {
   touch-action: pan-y;

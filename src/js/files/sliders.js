@@ -9,7 +9,7 @@
 // Пример: { Navigation, Autoplay }
 import Swiper, { Navigation, Pagination } from "swiper";
 /*
-Основниые модули слайдера:
+Основные модули слайдера:
 Navigation, Pagination, Autoplay, 
 EffectFade, Lazy, Manipulation
 Подробнее смотри https://swiperjs.com/
@@ -79,27 +79,27 @@ function initSliders() {
       },
 
       // Брейкпоинты
-      /*
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          autoHeight: true,
+        },
+        1100: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        1250: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        1380: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+
       // События
       on: {},
     });
