@@ -17,12 +17,16 @@
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #007aff;
+  --swiper-theme-color: #ff912b;
 }
 .swiper {
+  position: absolute;
+  width: 850px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   margin-left: auto;
   margin-right: auto;
-  position: relative;
   overflow: hidden;
   list-style: none;
   padding: 0;
@@ -62,7 +66,7 @@
 }
 .swiper-autoheight,
 .swiper-autoheight .swiper-slide {
-  height: auto;
+  height: 315px;
 }
 .swiper-autoheight .swiper-wrapper {
   align-items: flex-start;
@@ -252,7 +256,7 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-  bottom: 10px;
+  bottom: 0;
   left: 0;
   width: 100%;
 }
@@ -293,7 +297,7 @@
   );
   display: inline-block;
   border-radius: 50%;
-  background: var(--swiper-pagination-bullet-inactive-color, #000);
+  background: var(--swiper-pagination-bullet-inactive-color, #ff912b);
   opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
 }
 button.swiper-pagination-bullet {
