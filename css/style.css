@@ -915,16 +915,15 @@ a img {
 
 .feedbacks {
   position: relative;
-  max-width: 1900px;
+  max-width: 1440px;
   margin: auto;
-  height: 484px;
+  min-height: 484px;
   background-repeat: no-repeat;
 }
 
 .feedbacks__content {
   position: absolute;
   top: 50%;
-  left: 100px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -999,7 +998,7 @@ a img {
 
 .swiper {
   position: absolute;
-  width: 850px;
+  width: 885px;
   height: 315px;
   top: 50%;
   right: 0;
@@ -1042,11 +1041,6 @@ a img {
 .swiper-wrapper {
   -webkit-transform: translate3d(0px, 0, 0);
           transform: translate3d(0px, 0, 0);
-}
-
-.swiper-android .swiper-slide:not(:last-child),
-.swiper-wrapper:not(:last-child) {
-  margin-right: 13px;
 }
 
 .swiper-pointer-events {
@@ -2079,6 +2073,34 @@ button.swiper-pagination-bullet {
   .special-menu .rating-special-menu__body {
     left: 2.1875rem;
   }
+
+  .feedbacks__content {
+    left: 6.25rem;
+  }
+}
+
+@media (min-width: 1441px) {
+  .feedbacks {
+    border-radius: 24px 0 0 24px;
+  }
+}
+
+@media (max-width: 1379px) {
+  .feedbacks .swiper {
+    width: 620px;
+  }
+}
+
+@media (max-width: 1099.98px) {
+  .feedbacks .swiper {
+    width: 445px;
+  }
+}
+
+@media (max-width: 959.98px) {
+  .feedbacks .swiper {
+    width: 310px;
+  }
 }
 
 @media (max-width: 930px) {
@@ -2283,6 +2305,10 @@ button.swiper-pagination-bullet {
   .service {
     padding-bottom: 2.5rem;
   }
+
+  .feedbacks__content {
+    left: 1.25rem;
+  }
 }
 
 @media (max-width: 47.99875em) {
@@ -2436,6 +2462,16 @@ button.swiper-pagination-bullet {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 32px 0;
+  }
+
+  .feedbacks__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .feedbacks .swiper {
+    width: 610px;
   }
 }
 
@@ -3265,6 +3301,18 @@ button.swiper-pagination-bullet {
 @supports not (padding-bottom: clamp( 2.5rem , -0.5rem  +  15vw , 13rem )) {
     .service {
       padding-bottom: calc(2.5rem + 10.5 * (100vw - 20rem) / 70);
+    }
+}
+
+@supports (left: clamp( 1.25rem , -0.1785714286rem  +  7.1428571429vw , 6.25rem )) {
+    .feedbacks__content {
+      left: clamp( 1.25rem , -0.1785714286rem  +  7.1428571429vw , 6.25rem );
+    }
+}
+
+@supports not (left: clamp( 1.25rem , -0.1785714286rem  +  7.1428571429vw , 6.25rem )) {
+    .feedbacks__content {
+      left: calc(1.25rem + 5 * (100vw - 20rem) / 70);
     }
 }
 }

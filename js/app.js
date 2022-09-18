@@ -3487,6 +3487,25 @@
                 prevEl: ".swiper-button-prev",
                 nextEl: ".swiper-button-next"
             },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    autoHeight: true
+                },
+                1100: {
+                    slidesPerView: 2,
+                    spaceBetween: 0
+                },
+                1250: {
+                    slidesPerView: 2,
+                    spaceBetween: 0
+                },
+                1380: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
+            },
             on: {}
         });
     }
