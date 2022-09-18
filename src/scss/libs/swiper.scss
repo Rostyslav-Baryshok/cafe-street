@@ -22,6 +22,7 @@
 .swiper {
   position: absolute;
   width: 850px;
+  height: 315px;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
@@ -47,6 +48,9 @@
 .swiper-android .swiper-slide,
 .swiper-wrapper {
   transform: translate3d(0px, 0, 0);
+  &:not(:last-child) {
+    margin-right: 13px;
+  }
 }
 .swiper-pointer-events {
   touch-action: pan-y;
@@ -56,8 +60,8 @@
 }
 .swiper-slide {
   flex-shrink: 0;
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   position: relative;
   transition-property: transform;
 }
@@ -66,7 +70,7 @@
 }
 .swiper-autoheight,
 .swiper-autoheight .swiper-slide {
-  height: 315px;
+  // height: 315px;
 }
 .swiper-autoheight .swiper-wrapper {
   align-items: flex-start;
