@@ -144,7 +144,7 @@
   color: $mainColor;
   font-size: 13px;
   font-weight: normal;
-  margin: 0;
+  margin-bottom: 25px;
 }
 
 .footer .footer__company-about span {
@@ -155,23 +155,18 @@
   margin-bottom: 20px;
 }
 
-.footer .footer__icons {
-  margin-top: 25px;
-}
+// .footer .footer__icons {
+//   margin-top: 25px;
+// }
 
 .footer .footer__icons a {
   display: inline-block;
-  width: 35px;
-  height: 35px;
   cursor: pointer;
-  // border-radius: 2px;
-
-  // font-size: 20px;
-  // color: #ffffff;
-  // text-align: center;
-  // line-height: 35px;
-
   margin-right: 3px;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */
