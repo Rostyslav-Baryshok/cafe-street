@@ -296,6 +296,170 @@ a img {
   display: none;
 }
 
+.footer {
+  background: #f9d9aa;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+}
+
+.footer .footer__left,
+.footer .footer__center,
+.footer .footer__right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer .footer__left {
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer h3 {
+  color: #000;
+  font: normal 36px "Open Sans", cursive;
+  margin: 0;
+}
+
+.footer h3 span {
+  color: #ff912b;
+}
+
+/* Footer links */
+
+.footer .footer__links {
+  color: #000;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer .footer__links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.footer .footer__links a:hover {
+  text-decoration: underline;
+}
+
+.footer .footer__company-name {
+  color: #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer .footer__center {
+  width: 35%;
+  padding: 0 10px;
+}
+
+.footer__nav:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.footer .footer__center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer .footer__center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer .footer__center p {
+  display: inline-block;
+  color: #000;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.footer .footer__center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer .footer__center p a {
+  color: #ff912b;
+  text-decoration: none;
+}
+
+.footer .footer__center p a:hover {
+  text-decoration: underline;
+}
+
+.footer .footer__links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #7e7d7a;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer .footer__links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer .footer__right {
+  width: 20%;
+}
+
+.footer .footer__company-about {
+  line-height: 20px;
+  color: #000;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer .footer__company-about span {
+  display: block;
+  color: #ff912b;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer .footer__icons {
+  margin-top: 25px;
+}
+
+.footer .footer__icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 3px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
 .main-block {
   background-color: #f7ebda;
 }
@@ -989,7 +1153,8 @@ a img {
 
 .subscription {
   padding: 0 15px;
-  margin: 15px auto;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1200px;
 }
 
@@ -1969,6 +2134,22 @@ button.swiper-pagination-bullet {
 }
 
 @media (min-width: 75em) {
+  .footer {
+    padding-top: 3.4375rem;
+  }
+
+  .footer {
+    padding-left: 3.125rem;
+  }
+
+  .footer {
+    padding-bottom: 3.4375rem;
+  }
+
+  .footer {
+    padding-right: 3.125rem;
+  }
+
   .main-block__container {
     padding-top: 9.875rem;
   }
@@ -1999,6 +2180,14 @@ button.swiper-pagination-bullet {
 
   .special-menu__body {
     gap: 2.5rem;
+  }
+
+  .subscription {
+    margin-top: 5rem;
+  }
+
+  .subscription {
+    margin-bottom: 5rem;
   }
 }
 
@@ -2175,6 +2364,30 @@ button.swiper-pagination-bullet {
 @media (max-width: 930px) {
   .main-block__background_01 {
     opacity: 0.65;
+  }
+}
+
+@media (max-width: 880px) {
+  .footer {
+    font: bold 14px sans-serif;
+  }
+
+  .footer .footer__left,
+  .footer .footer__center,
+  .footer .footer__right {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer .footer__left:not(:last-child),
+  .footer .footer__center:not(:last-child),
+  .footer .footer__right:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .footer .footer__center i {
+    margin-left: 0;
   }
 }
 
@@ -3119,6 +3332,54 @@ button.swiper-pagination-bullet {
 }
 
 @media (min-width: 20em) and (max-width: 75em) {
+@supports (padding-top: clamp( 1.875rem , 1.3068181818rem  +  2.8409090909vw , 3.4375rem )) {
+    .footer {
+      padding-top: clamp( 1.875rem , 1.3068181818rem  +  2.8409090909vw , 3.4375rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.875rem , 1.3068181818rem  +  2.8409090909vw , 3.4375rem )) {
+    .footer {
+      padding-top: calc(1.875rem + 1.5625 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (padding-left: clamp( 2.5rem , 2.2727272727rem  +  1.1363636364vw , 3.125rem )) {
+    .footer {
+      padding-left: clamp( 2.5rem , 2.2727272727rem  +  1.1363636364vw , 3.125rem );
+    }
+}
+
+@supports not (padding-left: clamp( 2.5rem , 2.2727272727rem  +  1.1363636364vw , 3.125rem )) {
+    .footer {
+      padding-left: calc(2.5rem + 0.625 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.875rem , 1.3068181818rem  +  2.8409090909vw , 3.4375rem )) {
+    .footer {
+      padding-bottom: clamp( 1.875rem , 1.3068181818rem  +  2.8409090909vw , 3.4375rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.875rem , 1.3068181818rem  +  2.8409090909vw , 3.4375rem )) {
+    .footer {
+      padding-bottom: calc(1.875rem + 1.5625 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (padding-right: clamp( 2.5rem , 2.2727272727rem  +  1.1363636364vw , 3.125rem )) {
+    .footer {
+      padding-right: clamp( 2.5rem , 2.2727272727rem  +  1.1363636364vw , 3.125rem );
+    }
+}
+
+@supports not (padding-right: clamp( 2.5rem , 2.2727272727rem  +  1.1363636364vw , 3.125rem )) {
+    .footer {
+      padding-right: calc(2.5rem + 0.625 * (100vw - 20rem) / 55);
+    }
+}
+
 @supports (padding-top: clamp( 6.25rem , 4.9318181818rem  +  6.5909090909vw , 9.875rem )) {
     .main-block__container {
       padding-top: clamp( 6.25rem , 4.9318181818rem  +  6.5909090909vw , 9.875rem );
@@ -3188,6 +3449,30 @@ button.swiper-pagination-bullet {
 @supports not (padding-bottom: clamp( 3.75rem , 2.8409090909rem  +  4.5454545455vw , 6.25rem )) {
     .special-menu {
       padding-bottom: calc(3.75rem + 2.5 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (margin-top: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem )) {
+    .subscription {
+      margin-top: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem );
+    }
+}
+
+@supports not (margin-top: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem )) {
+    .subscription {
+      margin-top: calc(2.5rem + 2.5 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (margin-bottom: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem )) {
+    .subscription {
+      margin-bottom: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem )) {
+    .subscription {
+      margin-bottom: calc(2.5rem + 2.5 * (100vw - 20rem) / 55);
     }
 }
 }
