@@ -869,7 +869,10 @@
 //========================================================================================================================================================
 .subscription {
   padding: 0 15px;
-  margin: 15px auto;
+  margin-left: auto;
+  margin-right: auto;
+  @include adaptiveValue("margin-top", 80, 40, 2, 1200, 320);
+  @include adaptiveValue("margin-bottom", 80, 40, 2, 1200, 320);
   max-width: 1200px;
 
   // .subscription__container
