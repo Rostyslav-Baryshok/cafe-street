@@ -194,6 +194,16 @@ a img {
   border-radius: 12px;
 }
 
+._ibg img {
+  width: 100%;
+  height: 402px;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -975,6 +985,85 @@ a img {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
+}
+
+.subscription {
+  padding: 0 15px;
+  margin: 15px auto;
+  max-width: 1200px;
+}
+
+.subscription__container {
+  padding: 0 15px;
+}
+
+.subscription__body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.subscription__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subscription__title {
+  font-weight: 600;
+  padding: 5px 30px;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.subscription__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  padding: 5px 5px 5px 20px;
+  border-radius: 35px;
+  background-color: #fff;
+}
+
+.subscription__button {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+  border: 2px solid #2f2105;
+}
+
+.subscription__button:hover {
+  color: #000;
+  border: 2px solid #ff912b;
+  background-color: transparent;
+}
+
+.form__input {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  outline: none;
+  color: #7e7d7a;
 }
 
 /**
@@ -2049,6 +2138,14 @@ button.swiper-pagination-bullet {
   .feedbacks__content {
     left: 6.25rem;
   }
+
+  .subscription__title {
+    font-size: 2rem;
+  }
+
+  .subscription__form {
+    width: 30.375rem;
+  }
 }
 
 @media (min-width: 1441px) {
@@ -2232,9 +2329,21 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media (max-width: 530px) {
+  .form__input {
+    width: 120px;
+  }
+}
+
 @media (max-width: 520px) {
   .header__actions {
     display: none;
+  }
+
+  .subscription__body {
+    -webkit-transform: translateY(80%);
+        -ms-transform: translateY(80%);
+            transform: translateY(80%);
   }
 }
 
@@ -2289,6 +2398,14 @@ button.swiper-pagination-bullet {
 
   .feedbacks__content {
     left: 1.25rem;
+  }
+
+  .subscription__title {
+    font-size: 1.5rem;
+  }
+
+  .subscription__form {
+    width: 16.875rem;
   }
 }
 
@@ -2464,7 +2581,6 @@ button.swiper-pagination-bullet {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 20px;
   }
 
   .feedbacks__text {
@@ -2473,6 +2589,10 @@ button.swiper-pagination-bullet {
 
   .feedbacks .swiper {
     width: 280px;
+  }
+
+  .subscription__button {
+    padding: 5px 15px;
   }
 }
 
@@ -3314,6 +3434,30 @@ button.swiper-pagination-bullet {
 @supports not (left: clamp( 1.25rem , -0.1785714286rem  +  7.1428571429vw , 6.25rem )) {
     .feedbacks__content {
       left: calc(1.25rem + 5 * (100vw - 20rem) / 70);
+    }
+}
+
+@supports (font-size: clamp( 1.5rem , 1.3571428571rem  +  0.7142857143vw , 2rem )) {
+    .subscription__title {
+      font-size: clamp( 1.5rem , 1.3571428571rem  +  0.7142857143vw , 2rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.5rem , 1.3571428571rem  +  0.7142857143vw , 2rem )) {
+    .subscription__title {
+      font-size: calc(1.5rem + 0.5 * (100vw - 20rem) / 70);
+    }
+}
+
+@supports (width: clamp( 16.875rem , 13.0178571429rem  +  19.2857142857vw , 30.375rem )) {
+    .subscription__form {
+      width: clamp( 16.875rem , 13.0178571429rem  +  19.2857142857vw , 30.375rem );
+    }
+}
+
+@supports not (width: clamp( 16.875rem , 13.0178571429rem  +  19.2857142857vw , 30.375rem )) {
+    .subscription__form {
+      width: calc(16.875rem + 13.5 * (100vw - 20rem) / 70);
     }
 }
 }
