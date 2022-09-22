@@ -1,4 +1,3 @@
-//====================================================================================================
 .header {
   position: fixed;
   top: 0;
@@ -41,7 +40,7 @@
     align-items: center;
     @include adaptiveValue("gap", 24, 14, 2, 1170, 768);
 
-    @media (max-width: 520px) {
+    @media (max-width: 560px) {
       display: none;
     }
   }
@@ -146,7 +145,7 @@
 
 .form-header {
   background-color: $lightColor;
-  padding: 11px 12px;
+  padding: 11px 15px;
   border-radius: 35px;
 
   @media (max-width: $mobile) {
