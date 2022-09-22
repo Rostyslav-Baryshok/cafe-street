@@ -635,12 +635,7 @@ a img {
 
 .pupular .item-pupular__link {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: block;
 }
 
 .pupular .item-pupular__link img {
@@ -916,12 +911,7 @@ a img {
 
 .special-menu .item-special-menu__link {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: block;
 }
 
 .special-menu .item-special-menu__link img {
