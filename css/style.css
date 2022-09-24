@@ -1175,7 +1175,8 @@ a img {
   background-color: transparent;
 }
 
-.subscription .form__form-input {
+.subscription__form-input {
+  width: 55%;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
