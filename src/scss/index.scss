@@ -943,19 +943,14 @@
   &__image {
   }
 
-  .form {
-    // .subscription__form-input
-    &__form-input {
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 1.5;
-      outline: none;
-      color: $secondLightColor;
-
-      // @media (max-width: 530px) {
-      //   width: 120px;
-      // }
-    }
+  // .subscription__form-input
+  &__form-input {
+    width: 55%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    outline: none;
+    color: $secondLightColor;
   }
 }
 
