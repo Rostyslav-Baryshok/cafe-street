@@ -464,6 +464,9 @@ a img {
 }
 
 .main-block__button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 2px solid #2f2105;
 }
 
