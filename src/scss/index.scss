@@ -67,16 +67,13 @@
 
   // .main-block__button
   &__button {
+    align-items: center;
     border: 2px solid $secondColor;
     &:hover {
       color: $mainColor;
       border: 2px solid #ff912b;
       background-color: $sectionColor;
     }
-    // .main-block__button_text
-    &_text {
-    }
-    // .main-block__button_icon
     &_icon {
       display: flex;
       align-items: center;
