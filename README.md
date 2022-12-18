@@ -1,1 +1,3 @@
 # cafe-street
+
+Responsive website
